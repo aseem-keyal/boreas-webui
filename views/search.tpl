@@ -10,7 +10,7 @@
                 </div>
                 <div class="navbar-collapse collapse navbar-inverse-collapse">
                   <ul class="nav navbar-nav">
-                    <li><a href="http://github.com/aseem-keyal/boreas">Github</a></li>
+                    <li><a href="http://github.com/aseem-keyal/boreas-webui">Github</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="mailto:aseem.keyal@gmail.com">Contact Me</a></li>

@@ -86,7 +86,7 @@ def getWordRank(list, word):
         sum = 1
 
     avg = (docs * docs * 100) / float(sum)
-    return {'rank': str(avg)[:8], 'tossups': str(docs) + "/" + str(len(list)), 'earliness': str(10000 / float(sum))[:8]}
+    return {'rank': str(avg)[:8], 'tossups': str(docs) + "/" + str(len(list)), 'earliness': str(10000 / (float(sum) / docs))[:8]}
 
 
 def constructCollection(answerLines, category, difficulty):
