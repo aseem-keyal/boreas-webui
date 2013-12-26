@@ -2,6 +2,7 @@
 from bottle import route, run, debug, static_file, template, request
 import boreas
 import urllib
+import os
 
 
 @route('/search', method='GET')
@@ -39,4 +40,4 @@ def server_static(filepath):
 
 
 debug(True)
-run(host='0.0.0.0', port='5000', server='paste')
+run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), server='paste')
