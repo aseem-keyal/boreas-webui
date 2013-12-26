@@ -39,4 +39,4 @@ def server_static(filepath):
 
 
 debug(True)
-run(host='192.168.1.103', port='8555', server='paste')
+run(host='0.0.0.0', port='5000', server='paste')
