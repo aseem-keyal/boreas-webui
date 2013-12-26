@@ -1,10 +1,11 @@
 #!/usr/bin/env/python
-from bottle import route, run, debug, static_file, template, request
+from bottle import route, run, static_file, template, request
 import boreas
 import urllib
 import os
 
 
+@route('/')
 @route('/search', method='GET')
 def search():
     if request.query.getall('answerLine'):
@@ -39,5 +40,4 @@ def server_static(filepath):
     return static_file(filepath, root='./static/')
 
 
-debug(True)
 run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), server='paste')

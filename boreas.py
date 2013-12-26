@@ -56,7 +56,6 @@ def stripWords(tossups, lower, upper):
 
 
 def getTossups(url, name):
-    print "Retrieving " + name + " tossups from Quinterest.org..."
     html = urllib2.urlopen(url).read()
 
     soup = BeautifulSoup(html)
