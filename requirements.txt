@@ -1,5 +1,6 @@
 BeautifulSoup==3.2.1
 Paste==1.7.5.1
 argparse==1.2.1
+bottle==0.11.6
 distribute==0.6.34
 wsgiref==0.1.2
