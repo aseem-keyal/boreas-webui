@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/theme.css">
     <link rel="stylesheet" type="text/css" href="/static/examples.css">
+    <link rel="shortcut icon" href="/static/favicon.ico">
     <script src="/static/sorttable.js"></script>
     <script src="/static/jquery.js"></script>
     <script src="/static/typeahead.min.js"></script>

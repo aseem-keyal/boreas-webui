@@ -72,7 +72,7 @@
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button value="Search" type="submit" class="btn btn-primary">Search</button>
-                    <a class="btn btn-default" onclick="add_fields();">Add another</a>
+                    <a class="btn btn-default" onclick="add_fields();">Add answer line</a>
                 </div>
            </div>
 </form>

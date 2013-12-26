@@ -4,3 +4,4 @@ future_additions
 bottle.py
 static/*.css
 static/*.js
+env/

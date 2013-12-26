@@ -76,17 +76,19 @@ def getTossups(url, name):
 
 def getWordRank(list, word):
     sum = 0
+    length = 0
     docs = 0
     for tossup in list:
         if tossup.find(word) != -1:
             sum += tossup.find(word)
+            length += len(tossup)
             docs += 1
 
     if sum == 0:
         sum = 1
 
     avg = (docs * docs * 100) / float(sum)
-    return {'rank': str(avg)[:8], 'tossups': str(docs) + "/" + str(len(list)), 'earliness': str(10000 / (float(sum) / docs))[:8]}
+    return {'rank': str(avg)[:8], 'tossups': str(docs) + "/" + str(len(list)), 'earliness': str(1 / (float(sum) / length))[:8]}
 
 
 def constructCollection(answerLines, category, difficulty):
