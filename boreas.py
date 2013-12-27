@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from BeautifulSoup import BeautifulSoup
+from multiprocessing import Pool
 import math
 import string
 import urllib2
@@ -55,7 +56,7 @@ def stripWords(tossups, lower, upper):
     return realWords
 
 
-def getTossups(url, name):
+def getTossups(url):
     html = urllib2.urlopen(url).read()
 
     soup = BeautifulSoup(html)
@@ -92,9 +93,11 @@ def getWordRank(list, word):
 
 def constructCollection(answerLines, category, difficulty):
     collection = []
+    pool = Pool(processes=4)
+    urls = []
     for answerLine in answerLines:
-        tossupList = getTossups("http://quinterest.org/php/search.php?info=" + answerLine + "&categ=" + category + "&difficulty=" + difficulty + "&stype=Answer&tournamentyear=All", answerLine)
-        collection.append(tossupList)
+        urls.append("http://quinterest.org/php/search.php?info=" + answerLine + "&categ=" + category + "&difficulty=" + difficulty + "&stype=Answer&tournamentyear=All")
+    collection = pool.map(getTossups, urls)
     return collection
 
 
