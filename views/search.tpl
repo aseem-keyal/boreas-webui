@@ -63,10 +63,11 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="case" class="col-sm-2 control-label">Filter by case:</label>
+                <label for="case" class="col-sm-2 control-label">Filter by part of speech:</label>
                 <div class="col-sm-10">
-                    <input type="radio" name="case" id="case" value="lower"> Lower
-                    <input type="radio" name="case" id="case" value="upper"> Upper
+                    <input type="radio" name="case" id="case" value="lower"> No proper nouns
+                    <br />
+                    <input type="radio" name="case" id="case" value="upper"> Only proper nouns
                 </div>
             </div>
             <div class="form-group">
